@@ -43,10 +43,10 @@ Copyright 2013 Kevin Sylvestre
     Growl.settings = {
       namespace: 'growl',
       duration: 3200,
-      close: "&times;",
-      location: "default",
+      close: "<i class=\"ion-close\"></i>",
+      location: "bc",
       style: "default",
-      size: "medium"
+      size: "auto"
     };
 
     Growl.growl = function(settings) {

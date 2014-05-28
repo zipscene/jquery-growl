@@ -1,0 +1,118 @@
+/*
+ * jQuery Growl
+ * Copyright 2013 Kevin Sylvestre
+ * 1.1.8
+ */
+
+$black: #000 !default;
+$white: #FFF !default;
+$duration: 0.4s !default;
+
+$opacity: 0.95 !default;
+$primary-color: #428bca !default;
+$default-color:  #fff !default;
+$positive-color: #5cb85c !default;
+$negative-color: #d9534f !default;
+
+#growls {
+	z-index: 50000;
+	position: fixed;
+
+	&.default {
+		top: 10px;
+		right: 10px;
+	}
+	&.tl {
+		top: 10px;
+		left: 10px;
+	}
+	&.tr {
+		top: 10px;
+		right: 10px;
+	}
+	&.bl {
+		bottom: 10px;
+		left: 10px;
+	}
+	&.br {
+		bottom: 10px;
+		right: 10px;
+	}
+	&.bc {
+		bottom: 10px;
+		right: 10px;
+		left: 10px;
+	}
+}
+
+.growl {
+	@include opacity($opacity);
+	@include transition(all $duration ease-in-out);
+	position: relative;
+	border-radius: 4px;
+
+	&.growl-incoming {
+		@include opacity(0.0);
+	}
+
+	&.growl-outgoing {
+		@include opacity(0.0);
+	}
+
+	&.growl-small {
+		width: 200px;
+		padding: 5px;
+		margin: 5px;
+	}
+	&.growl-medium {
+		width: 250px;
+		padding: 10px;
+		margin: 10px;
+	}
+	&.growl-large {
+		width: 300px;
+		padding: 15px;
+		margin: 15px;
+	}
+	&.growl-auto {
+		padding: 15px;
+		margin: 15px;
+	}
+
+	&.growl-default {
+		color: $black;
+		background: $default-color;
+	}
+	&.growl-error {
+		color: $white;
+		background: $negative-color;
+	}
+	&.growl-notice {
+		color: $white;
+		background: $positive-color;
+	}
+	&.growl-warning {
+		color: $white;
+		background: $primary-color;
+	}
+
+	.growl-close {
+		cursor: pointer;
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		font-size: 14px;
+		line-height: 18px;
+		font-weight: normal;
+	}
+
+	.growl-title {
+		font-size: 18px;
+		line-height: 24px;
+	}
+
+	.growl-message {
+		font-size: 14px;
+		line-height: 18px;
+	}
+}
