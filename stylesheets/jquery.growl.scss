@@ -46,17 +46,13 @@ $negative-color: #d9534f !default;
 }
 
 .growl {
-	@include opacity($opacity);
+	opacity: $opacity;
 	@include transition(all $duration ease-in-out);
 	position: relative;
 	border-radius: 4px;
 
-	&.growl-incoming {
-		@include opacity(0.0);
-	}
-
-	&.growl-outgoing {
-		@include opacity(0.0);
+	&.growl-incoming, &.growl-outgoing {
+		opacity: 0;
 	}
 
 	&.growl-small {
