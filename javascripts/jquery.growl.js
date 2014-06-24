@@ -42,7 +42,7 @@ Copyright 2013 Kevin Sylvestre
   Growl = (function() {
     Growl.settings = {
       namespace: 'growl',
-      duration: 3200,
+      duration: 1500,
       close: "<i class=\"ion-close\"></i>",
       location: "bc",
       style: "default",
