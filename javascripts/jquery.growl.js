@@ -58,7 +58,7 @@ Copyright 2013 Kevin Sylvestre
     };
 
     Growl.initialize = function() {
-      return $("body:not(:has(#growls))").append('<div id="growls" />');
+      //return $("body:not(:has(#growls))").append('<div id="growls" />');
     };
 
     function Growl(settings) {
